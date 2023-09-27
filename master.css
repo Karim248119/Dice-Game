@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: blue;
+}
+.center {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: white;
+    width: 900px;
+    height: 600px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr  1fr 0.5fr 1fr;
+}
+.btn_new {
+    grid-row: 1/2;
+    grid-column: 4/5;
+    align-self: self-end;
+    width: 100px;
+    height: 40px;
+}
+img {
+    grid-row: 3/4;
+    grid-column: 4/5;
+    background-color: rgb(2, 2, 2);
+    justify-self: center;
+    align-self: center;
+    border-radius: 13px;
+}
+
+.btn_roll{
+    grid-row: 4/5;
+    grid-column: 4/5;
+    justify-self:center;
+    align-self: self-end;
+    width: 100px;
+    height: 40px;
+}
+.btn_hold {
+    grid-row: 6/7;
+    grid-column: 4/5;
+    justify-self: center;
+    align-self: self-start;
+    width: 70px;
+    height: 40px;
+}
+.player0{
+    grid-row: 2/6;
+    grid-column: 2/3;
+}
+
+.player1 {
+    grid-row: 2/6;
+    grid-column: 6/7;
+}
+.player0, .player1 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.current{
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    height: 220px;
+    width: 170px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.current p {
+    padding-top: 10px;
+}
+.score {
+    font-size: 40px;
+    color: red;
+}
+h1{
+    font-size: 40px;
+}
+.btn{
+    border: 0;
+    background-color: white;
+    box-shadow: 0 0 3px 0 black;
+    height: 30px;
+    border-radius: 20px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+
+.player_winner .name{
+    font-weight: 700;
+    color: blueviolet;
+}
+
+.player_active{
+    background-color: #eee;
+}
+
+img{
+        transition: all 5s;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 3px 0 blueviolet;
+}
+.player_winner {
+    background-color: black;
+}
